@@ -1,4 +1,4 @@
-# AEDSIII-T1
+# AEDSIII - Trabalho 01
 Trabalho I da disciplina Algoritmos e Estruturas de Dados III
 
 Grupo:
