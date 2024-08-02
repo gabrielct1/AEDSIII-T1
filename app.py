@@ -16,11 +16,19 @@ def ler_labirinto(filename):
 
 
 def imprimir_labirinto_com_caminho(labirinto, caminho, nome_arquivo):
-    with open(nome_arquivo, 'w') as f:
+    with open(nome_arquivo, 'w', encoding='utf-8') as f:
         for i in range(len(labirinto)):
             for j in range(len(labirinto[0])):
-                if (i, j) in caminho:
+                if (i, j) == caminho[0]:
+                    f.write('S ')
+                elif (i, j) == caminho[-1]:
+                    f.write('E ')
+                elif (i, j) in caminho:
                     f.write('* ')
+                elif labirinto[i][j] == '#':
+                    f.write('█ ')
+                elif labirinto[i][j] == ' ':
+                    f.write('█ ')
                 else:
                     f.write(labirinto[i][j] + ' ')
             f.write('\n')
